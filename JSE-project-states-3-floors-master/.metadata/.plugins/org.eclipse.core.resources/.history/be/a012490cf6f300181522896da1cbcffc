@@ -1,0 +1,5 @@
+package io.altar.textInterface.stateMachine;
+
+public class FSM {
+
+}

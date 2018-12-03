@@ -1,0 +1,56 @@
+package io.altar.textInterface.stateMachine.scannerUtils;
+
+import java.util.Scanner;
+
+public class ScannerUtils {
+
+	public int isAnIntBetweenMinimumAndMaximum(String textToPresent, int minimum, int maximum) {
+		Scanner sc = new Scanner(System.in);
+		int provisoryReturn;
+		System.out.println(textToPresent);
+		if (sc.hasNextInt()) {
+			provisoryReturn = sc.nextInt();
+			if (provisoryReturn >= minimum && provisoryReturn <= maximum) {
+				sc.close();
+				return provisoryReturn;
+			}
+		}
+		System.out.println("Error! Please insert a number between "+minimum+" and "+maximum+"!");
+		sc.close();
+		return -1;
+
+	}
+	public double isADoubleBetweenMinimumAndMaximum(String textToPresent, int minimum, int maximum) {
+		Scanner sc = new Scanner(System.in);
+		double provisoryReturn;
+		System.out.println(textToPresent);
+		if (sc.hasNextDouble()) {
+			provisoryReturn = sc.nextDouble();
+			if (provisoryReturn >= minimum && provisoryReturn <= maximum) {
+				sc.close();
+				return provisoryReturn;
+			}
+		}
+		System.out.println("Error! Please insert a number between "+minimum+" and "+maximum+"!");
+		sc.close();
+		return -1;
+
+	}
+	public int getValidIntFromScanner(int [] acceptedValues) {
+		int input=-1;
+		boolean isAValidInput=false;
+		Scanner sc = new Scanner(System.in);
+		do {
+			if(sc.hasNextInt()) {
+				input=sc.nextInt();
+				for(int i:acceptedValues) {
+					if(input==i) {
+						isAValidInput=true;
+					}
+				}
+			}
+		}while(isAValidInput!=true);
+		sc.close();
+		return input;
+	}
+}

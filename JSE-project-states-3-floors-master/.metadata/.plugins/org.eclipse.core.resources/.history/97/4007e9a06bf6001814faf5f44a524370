@@ -1,0 +1,8 @@
+package io.altar.controller;
+import io.altar.models.Product;
+
+public class Controller {
+	public void addNewProductToProductRepository(Product productToAdd) {
+		
+	}
+}

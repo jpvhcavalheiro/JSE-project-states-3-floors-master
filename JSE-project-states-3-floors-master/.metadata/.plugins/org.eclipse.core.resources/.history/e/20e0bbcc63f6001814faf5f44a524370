@@ -1,0 +1,20 @@
+package io.altar.textInterface.stateMachine.states;
+
+import io.altar.textInterface.stateMachine.scannerUtils.ScannerUtils;
+
+public class CreateProduct implements State {
+	public int execute() {
+		double price1 = ScannerUtils.isADoubleBetweenMinimumAndMaximum("Please insert price:", 0.0, 1.7E308);
+		int discount1 = ScannerUtils.isAnIntBetweenMinimumAndMaximum("Please insert discount:", 0, 100);
+		int iva1 = ScannerUtils.isAnIntBetweenMinimumAndMaximum("Please insert iva:", 0, 100);
+		
+		
+		
+		if(price1==-1 || discount1==-1 || iva1==-1) {
+			System.out.println("Error! Invalid input");
+		} else {
+			
+		}
+		return 1;
+	}
+}

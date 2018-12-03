@@ -1,0 +1,9 @@
+package io.altar.textInterface.stateMachine.states;
+
+public class ShelfMenu implements State {
+@Override
+public int execute(){
+	System.out.println("Shelf menu");
+}
+	
+}

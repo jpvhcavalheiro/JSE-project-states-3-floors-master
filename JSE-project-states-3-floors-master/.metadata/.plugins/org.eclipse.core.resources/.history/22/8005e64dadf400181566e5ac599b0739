@@ -1,0 +1,19 @@
+package io.altar.textInterface.stateMachine;
+
+import io.altar.textInterface.stateMachine.states.*;
+
+public class FSM {
+
+	private State[] states = { new InitialMenu(), // 0
+			new ProductMenu(), // 1
+			new ShelfMenu() }; // 2
+
+	private int transitionsMatrix[][] = { { 1, 2 }, // state 0 (initial menu)
+			{ 1, 1, 1, 1, 0 }, // state 1 (product menu)
+			{ 2, 2, 2, 2, 0 } }; // state 2 (shelf menu)
+	private int currentState=0;
+	public static void main(String[] args) {
+		FSM fsm =new FSM();
+		int opcao =0;
+	}
+}
