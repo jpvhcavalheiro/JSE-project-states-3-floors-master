@@ -16,6 +16,7 @@ public class ScannerUtils {
 				return provisoryReturn;
 			}
 		}
+		//System.out.println("ola");
 		scanner.nextLine();
 		return -1;
 	}
